@@ -1,0 +1,18 @@
+@use '../vars' as vars;
+
+#itemListContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 13vw;
+    width: 100%;
+    min-height: 50vh;
+    justify-self: center;
+    background-color: #F5F5F5;
+}
+
+#itemAllListContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+}

@@ -1,0 +1,67 @@
+@use '../vars' as vars;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    img {
+        background-color: #ebebeb;
+        height: 270px;
+        object-fit: contain;
+        margin-bottom: 13px;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    h2 {
+        color: vars.$fontBlack;
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 14px;
+        color: vars.$fontGrey;
+    }
+    h4 {
+        font-size: 14px;
+        color: vars.$fontGrey;
+    }
+}
+
+.itemCardSingle {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    img {
+        background-color: #ebebeb;
+        height: 90%;
+        width: 100%;
+        object-fit: contain;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    h2 {
+        color: vars.$fontBlack;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 20px;
+        color: vars.$fontGrey;
+    }
+    h4 {
+        font-size: 20px;
+        color: vars.$fontGrey;
+    }
+    h5 {
+        color: vars.$fontBlack;
+    }
+}

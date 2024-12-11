@@ -1,0 +1,79 @@
+@use '../vars' as vars;
+#itemDetail {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+    height: 90vh;
+}
+
+#itemDetailText {
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: vars.$fontBlack;
+    }
+    h2 {
+        color: vars.$fontGrey;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    h3 {
+        color: vars.$fontBlack;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    h4 {
+        color: vars.$fontGrey;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            font-family: vars.$fontRoboto;
+            color: vars.$fontGrey;
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+    h5 {
+        color: vars.$fontBlack;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    button {
+        font-family: vars.$fontRoboto;
+        color: vars.$fontBlack;
+        border: 1px solid vars.$fontBlack;
+        padding: 15px 50px;
+    }
+}
+
+#images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    img {
+        justify-self: center;
+        height: 85vh;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: scale(1.5); /* Aumenta el tamaño al pasar el mouse */
+        }
+    }
+}
+
+#radioGroup {
+    height: 5vh;
+}

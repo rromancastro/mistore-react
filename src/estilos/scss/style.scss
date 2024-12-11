@@ -1,0 +1,33 @@
+//sass --watch src/estilos/scss/style.scss src/estilos/css/style.css
+
+
+//IMPORTS PAGES
+@use './pages/home';
+@use './pages/itemDetail';
+
+//IMPORTS COMPONENTS
+@use './components/nav';
+@use './components/footer';
+@use './components/itemCard';
+@use './components/itemListContainer';
+
+//VARS
+@use './vars';
+
+
+//IMPORTS FUENTES
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+// RESET 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: "Roboto", sans-serif;
+    line-height: 1;
+}
