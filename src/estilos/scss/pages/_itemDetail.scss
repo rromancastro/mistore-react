@@ -42,18 +42,13 @@
             color: vars.$fontGrey;
             font-size: 15px;
             font-weight: 300;
+            text-decoration: underline;
         }
     }
     h5 {
         color: vars.$fontBlack;
         font-size: 30px;
         font-weight: 700;
-    }
-    button {
-        font-family: vars.$fontRoboto;
-        color: vars.$fontBlack;
-        border: 1px solid vars.$fontBlack;
-        padding: 15px 50px;
     }
 }
 
@@ -62,18 +57,58 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    height: 100%;
     position: relative;
-    img {
-        justify-self: center;
-        height: 85vh;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-        &:hover {
-            transform: scale(1.5); /* Aumenta el tamaño al pasar el mouse */
-        }
-    }
+    padding: 0px 40px;
 }
+
+.zoom-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin-top: 30px;
+    cursor: zoom-in;
+  }
+  
+  .zoom-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform .7s ease;
+  }
+  
+  .zoom-container:hover .zoom-image {
+    transform: scale(3);
+  }
 
 #radioGroup {
     height: 5vh;
+    margin-top: 30px;
+}
+
+#addToCartContainer {
+    font-family: vars.$fontRoboto;
+    color: vars.$fontBlack;
+    h3 {
+        text-align: center;
+        padding: 20px 0px;
+        border: 1px solid vars.$fontBlack;
+        font-size: 16px;
+        transition: .2s;
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            background-color: rgb(206, 206, 206);
+        }
+        &:nth-child(2) {
+            cursor: auto;
+            &:active {
+                background-color: #F5F5F5;
+            }
+        }
+    }
 }

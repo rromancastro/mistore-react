@@ -3,7 +3,7 @@ import { Link } from "react-router"
 
 export const ItemCardSingle = ({data}) => {
     return (
-        <Link to={`./product/:${data.id}`}>
+        <Link to={`/product/${data.id}`}>
         <article className="itemCardSingle"> 
             <img src={data.images[1] ? data.images[1] : data.images[0]} alt="" />
             <div>

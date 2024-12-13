@@ -8,7 +8,6 @@ export const useGetProductById = (id) => {
         getProductById(id)
         .then((res) => {
             setProduct(res.data)
-            console.log(res.data)
         })
     },[])
     return {product}

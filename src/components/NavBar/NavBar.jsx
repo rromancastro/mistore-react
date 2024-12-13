@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router"
-
+import {CartWidget} from '../CartWidget/CartWidget'
 import { IoIosSearch, IoMdList } from "react-icons/io";
-import { IoBagHandleOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 
 import {
@@ -61,10 +60,10 @@ export const NavBar = () => {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4} display={'flex'} flexDirection={'column'}>
-                            <Link to={'/products/:furniture'}>Furniture</Link>
-                            <Link to={'/products/:groceries'}>Groceries</Link>
-                            <Link to={'/products/:home-decoratio'}>Home Decoration</Link>
-                            <Link to={'/products/:kitchen-accessories'}>Kitchen Accessories</Link>
+                            <Link to={'/products/furniture'}>Furniture</Link>
+                            <Link to={'/products/groceries'}>Groceries</Link>
+                            <Link to={'/products/home-decoratio'}>Home Decoration</Link>
+                            <Link to={'/products/kitchen-accessories'}>Kitchen Accessories</Link>
                         </AccordionPanel>
                     </AccordionItem>
 
@@ -76,9 +75,9 @@ export const NavBar = () => {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4} display={'flex'} flexDirection={'column'}>
-                            <Link to={'/products/:mens-shirts'}>Mens Shirts</Link>
-                            <Link to={'/products/:mens-shoes'}>Mens Shoes</Link>
-                            <Link to={'/products/:mens-watches'}>Mens Watches</Link>
+                            <Link to={'/products/mens-shirts'}>Mens Shirts</Link>
+                            <Link to={'/products/mens-shoes'}>Mens Shoes</Link>
+                            <Link to={'/products/mens-watches'}>Mens Watches</Link>
                         </AccordionPanel>
                     </AccordionItem>
 
@@ -90,12 +89,12 @@ export const NavBar = () => {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4} display={'flex'} flexDirection={'column'}>
-                            <Link to={'/products/:womens-bags'}>Womens Bags</Link>
-                            <Link to={'/products/:womens-dresses'}>Womens Dresses</Link>
-                            <Link to={'/products/:womens-jewellery'}>Womens Jewellery</Link>
-                            <Link to={'/products/:womens-shoes'}>Womens Shoes</Link>
-                            <Link to={'/products/:womens-watches'}>Womens Watches</Link>
-                            <Link to={'/products/:tops'}>Womens Tops</Link>
+                            <Link to={'/products/womens-bags'}>Womens Bags</Link>
+                            <Link to={'/products/womens-dresses'}>Womens Dresses</Link>
+                            <Link to={'/products/womens-jewellery'}>Womens Jewellery</Link>
+                            <Link to={'/products/womens-shoes'}>Womens Shoes</Link>
+                            <Link to={'/products/womens-watches'}>Womens Watches</Link>
+                            <Link to={'/products/tops'}>Womens Tops</Link>
                         </AccordionPanel>
                     </AccordionItem>
 
@@ -107,11 +106,11 @@ export const NavBar = () => {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4} display={'flex'} flexDirection={'column'}>
-                            <Link to={'/products/:laptops'}>Laptops</Link>
-                            <Link to={'/products/:smartphones'}>Smartphones</Link>
-                            <Link to={'/products/:mobile-accessories'}>Mobile Accessories</Link>
-                            <Link to={'/products/:womens-watches'}>Womens Watches</Link>
-                            <Link to={'/products/:mens-watches'}>Mens Watches</Link>
+                            <Link to={'/products/laptops'}>Laptops</Link>
+                            <Link to={'/products/smartphones'}>Smartphones</Link>
+                            <Link to={'/products/mobile-accessories'}>Mobile Accessories</Link>
+                            <Link to={'/products/womens-watches'}>Womens Watches</Link>
+                            <Link to={'/products/mens-watches'}>Mens Watches</Link>
                             
                         </AccordionPanel>
                     </AccordionItem>
@@ -124,8 +123,8 @@ export const NavBar = () => {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4} display={'flex'} flexDirection={'column'}>
-                            <Link to={'/products/:vehicle'}>Cars</Link>
-                            <Link to={'/products/:motorcycle'}>Motorcycles</Link>
+                            <Link to={'/products/vehicle'}>Cars</Link>
+                            <Link to={'/products/motorcycle'}>Motorcycles</Link>
 
                         </AccordionPanel>
                     </AccordionItem>
@@ -138,10 +137,10 @@ export const NavBar = () => {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4} display={'flex'} flexDirection={'column'}>
-                            <Link to={'/products/:beauty'}>Make-up</Link>
-                            <Link to={'/products/:fragrances'}>Fragrances</Link>
-                            <Link to={'/products/:skin-care'}>Skin Care</Link>
-                            <Link to={'/products/:sunglasses'}>Sunglasses</Link>
+                            <Link to={'/products/beauty'}>Make-up</Link>
+                            <Link to={'/products/fragrances'}>Fragrances</Link>
+                            <Link to={'/products/skin-care'}>Skin Care</Link>
+                            <Link to={'/products/sunglasses'}>Sunglasses</Link>
 
                         </AccordionPanel>
                     </AccordionItem>
@@ -154,7 +153,7 @@ export const NavBar = () => {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4} display={'flex'} flexDirection={'column'}>
-                            <Link to={'/products/:sports-accessories'}>Sports Accessories</Link>
+                            <Link to={'/products/sports-accessories'}>Sports Accessories</Link>
 
                         </AccordionPanel>
                     </AccordionItem>
@@ -171,7 +170,7 @@ export const NavBar = () => {
                     <Link><IoIosSearch className="navUtilitieItem" /></Link>
                 </div>
                 <FiUser className="navUtilitieItem" />
-                <IoBagHandleOutline className="navUtilitieItem" />
+                <CartWidget/>
             </section>
         </nav>
     )

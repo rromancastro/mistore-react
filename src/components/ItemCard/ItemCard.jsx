@@ -2,7 +2,7 @@ import { Link } from "react-router"
 
 export const ItemCard = ({data}) => {
     return (
-        <Link to={`./product/:${data.id}`}>
+        <Link to={`/product/${data.id}`}>
             <article className="card">
                 <img src={data.thumbnail} alt="" />
                 <div>

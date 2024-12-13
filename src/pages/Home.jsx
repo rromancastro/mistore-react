@@ -23,11 +23,11 @@ export const Home = () => {
             <section id='homeSecondSection'>
                 <h1>Featured Products</h1>
                 <div id='homeSecondSectionSelect'>
-                    <h3 onClick={() => {setCategorySelect('mens-shoes')}}>Mens Shoes</h3>
-                    <h3 onClick={() => {setCategorySelect('womens-shoes')}}>Womens Shoes</h3>
-                    <h3 onClick={() => {setCategorySelect('laptops')}}>Laptops</h3>
-                    <h3 onClick={() => {setCategorySelect('home-decoration')}}>Home Decoration</h3>
-                    <h3 onClick={() => {setCategorySelect('womens-bags')}}>Womens Bags</h3>
+                    <h3 className={categorySelect == 'mens-shoes' ? 'sit' : ''} onClick={() => {setCategorySelect('mens-shoes')}}>Mens Shoes</h3>
+                    <h3 className={categorySelect == 'womens-shoes' ? 'sit' : ''} onClick={() => {setCategorySelect('womens-shoes')}}>Womens Shoes</h3>
+                    <h3 className={categorySelect == 'laptops' ? 'sit' : ''} onClick={() => {setCategorySelect('laptops')}}>Laptops</h3>
+                    <h3 className={categorySelect == 'home-decoration' ? 'sit' : ''} onClick={() => {setCategorySelect('home-decoration')}}>Home Decoration</h3>
+                    <h3 className={categorySelect == 'womens-bags' ? 'sit' : ''} onClick={() => {setCategorySelect('womens-bags')}}>Womens Bags</h3>
                 </div>
                 <ItemListContainer products={products}/>
             </section>
