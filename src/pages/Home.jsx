@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Layout } from '../Layout'
-import { ItemListContainer } from '../components'
+import { ItemListContainer, Loader } from '../components'
 import { useGetProductsByCategory } from '../hooks'
 import { Link } from 'react-router'
 
@@ -8,16 +8,16 @@ import { Link } from 'react-router'
 export const Home = () => {
 
     const [categorySelect, setCategorySelect] = useState('mens-shoes')
-    const { products } = useGetProductsByCategory(categorySelect)
+    const { products, loader } = useGetProductsByCategory(categorySelect)
     
     return (
         <Layout>
+            { loader ? <Loader /> : <>
             <section id='homeHeader'>
                 <div id='homeHeaderInfo'>
                     <h1>OUTLET</h1>
                     <h2>50% off on sunglasses</h2>
                     <h3><Link to={'./products/:sunglasses'}>VIEW</Link></h3>
-                    
                 </div>
             </section>
             <section id='homeSecondSection'>
@@ -30,7 +30,8 @@ export const Home = () => {
                     <h3 className={categorySelect == 'womens-bags' ? 'sit' : ''} onClick={() => {setCategorySelect('womens-bags')}}>Womens Bags</h3>
                 </div>
                 <ItemListContainer products={products}/>
-            </section>
+            </section> </>
+            }
         </Layout>
     )
 }

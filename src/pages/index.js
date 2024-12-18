@@ -1,3 +1,5 @@
 export * from './Home'
-export * from './ProductsSearch'
+export * from './ProductsByCategory'
 export * from './ItemDetail'
+export * from './ProductsSearch'
+export * from './CartView'

@@ -15,3 +15,7 @@ export async function getProductsByCategory(category) {
 export async function getProductById(id) {
     return await axios.get(`https://dummyjson.com/products/${id}`)
 }
+
+export async function getProductsSearch(searchValue) {
+    return await axios.get(`https://dummyjson.com/products/search?q=${searchValue}`)
+}

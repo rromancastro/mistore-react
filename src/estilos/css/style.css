@@ -25,18 +25,18 @@
   -webkit-text-stroke: 6px white;
 }
 #homeHeaderInfo h2 {
-  color: #FFFFFF;
+  color: #F5F5F5;
   font-size: 45px;
   margin-bottom: 10px;
 }
 #homeHeaderInfo h3 {
   font-weight: 500;
   font-size: 20px;
-  border: 4px solid #FFFFFF;
+  border: 4px solid #F5F5F5;
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  color: #FFFFFF;
+  color: #F5F5F5;
   background-color: rgba(250, 250, 250, 0.3490196078);
 }
 
@@ -135,7 +135,6 @@
   width: 100%;
   height: 500px;
   overflow: hidden;
-  border: 1px solid #ddd;
   margin-top: 30px;
   cursor: zoom-in;
 }
@@ -145,7 +144,10 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.7s ease;
+  transition: transform 0.7s ease, background-color 0.7s;
+}
+.zoom-image:hover {
+  background-color: #efefef;
 }
 
 .zoom-container:hover .zoom-image {
@@ -181,6 +183,94 @@
   background-color: #F5F5F5;
 }
 
+#cartView {
+  min-height: 90vh;
+  width: 100%;
+  background-color: #F5F5F5;
+  display: flex;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#productsView {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#productCartView {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-color: rgb(237, 237, 237);
+  color: #1d1d1d;
+}
+#productCartView img {
+  height: 80px;
+  justify-self: center;
+  align-self: center;
+  object-fit: contain;
+}
+
+#productCartViewInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+#productCartViewInfo h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+#productCartViewInfo h3 {
+  font-weight: 400;
+  font-size: 15px;
+}
+#productCartViewInfo #quantitySelect {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-direction: row;
+}
+#productCartViewInfo #quantitySelect p {
+  font-weight: 500;
+}
+#productCartViewInfo #quantitySelect button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(217, 217, 217);
+  padding: 0px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#subtotal {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+#subtotal h3 {
+  font-weight: 500;
+}
+#subtotal button {
+  background-color: rgb(175, 42, 42);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#purchaseInfo {
+  padding: 0px 40px;
+}
+#purchaseInfo h2 {
+  color: #1d1d1d;
+  font-weight: 800;
+  font-size: 40px;
+}
+
 nav {
   position: absolute;
   width: 100%;
@@ -208,7 +298,7 @@ nav {
   font-weight: 300;
   font-size: 16px;
   gap: 5px;
-  color: #FFFFFF;
+  color: #F5F5F5;
 }
 
 #drawerBody {
@@ -217,7 +307,7 @@ nav {
 
 #brandText {
   display: inline-block;
-  color: #FFFFFF;
+  color: #F5F5F5;
   font-family: "DM Serif Display", serif;
   font-size: 29px;
   letter-spacing: 0.6px;
@@ -232,7 +322,7 @@ nav {
 #navUtilities .navUtilitieItem {
   width: 20px;
   height: 20px;
-  color: #FFFFFF;
+  color: #F5F5F5;
 }
 #navUtilities #searchContainer {
   display: flex;
@@ -242,9 +332,9 @@ nav {
   background-color: rgba(255, 255, 255, 0);
   height: 22px;
   outline: none;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #F5F5F5;
   font-size: 15px;
-  color: #FFFFFF;
+  color: #F5F5F5;
 }
 
 .navbar-colored {
@@ -287,6 +377,7 @@ footer {
   background-color: #ebebeb;
   height: 270px;
   object-fit: contain;
+  transition: 0.3s;
   margin-bottom: 13px;
 }
 .card div {
@@ -306,9 +397,12 @@ footer {
   font-size: 14px;
   color: #a5a5a5;
 }
+.card:hover img {
+  background-color: #dddddd;
+}
 
 .itemCardSingle {
-  height: 100%;
+  height: 500px;
   width: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -320,9 +414,10 @@ footer {
 }
 .itemCardSingle img {
   background-color: #ebebeb;
-  height: 90%;
+  height: 400px;
   width: 100%;
   object-fit: contain;
+  transition: 0.3s;
 }
 .itemCardSingle div {
   display: flex;
@@ -345,13 +440,16 @@ footer {
 .itemCardSingle h5 {
   color: #1d1d1d;
 }
+.itemCardSingle:hover img {
+  background-color: #dddddd;
+}
 
 #itemListContainer {
   display: flex;
   flex-direction: column;
   padding: 0 13vw;
   width: 100%;
-  min-height: 50vh;
+  min-height: 100vh;
   justify-self: center;
   background-color: #F5F5F5;
 }

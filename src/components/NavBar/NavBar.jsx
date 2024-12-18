@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router"
 import {CartWidget} from '../CartWidget/CartWidget'
 import { IoIosSearch, IoMdList } from "react-icons/io";
-import { FiUser } from "react-icons/fi";
 
 import {
     Drawer,
@@ -19,7 +18,7 @@ import {
     AccordionPanel,
     AccordionIcon,
   } from '@chakra-ui/react'
-import React from "react";
+import React, { useState } from "react";
 
 
 export const NavBar = () => {
@@ -33,6 +32,9 @@ export const NavBar = () => {
 
     const isHome = location.pathname === '/';
     const navClass = isHome ? 'navbar-transparent' : 'navbar-colored';
+
+    //input search
+    const [searchValue, setSearchValue] = useState('')
 
     return (
         <nav className={navClass}>
@@ -166,11 +168,12 @@ export const NavBar = () => {
             <Link to={'/'} id="brandText">MiStore</Link>
             <section id="navUtilities">
                 <div id="searchContainer">
-                    <input type="text" name="inputSearch" id="inputSearch" />
-                    <Link><IoIosSearch className="navUtilitieItem" /></Link>
+                    <input type="text" name="inputSearch" id="inputSearch" onKeyUp={(value) => {setSearchValue(value.target.value)}}/>
+                    <Link to={`/products/search/${searchValue}`}><IoIosSearch className="navUtilitieItem" /></Link>
                 </div>
-                <FiUser className="navUtilitieItem" />
+                
                 <CartWidget/>
+                
             </section>
         </nav>
     )

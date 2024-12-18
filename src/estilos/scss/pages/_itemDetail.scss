@@ -50,6 +50,7 @@
         font-size: 30px;
         font-weight: 700;
     }
+    
 }
 
 #images {
@@ -67,7 +68,6 @@
     width: 100%;
     height: 500px;
     overflow: hidden;
-    border: 1px solid #ddd;
     margin-top: 30px;
     cursor: zoom-in;
   }
@@ -77,7 +77,10 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: transform .7s ease;
+    transition: transform .7s ease, background-color .7s ;
+    &:hover {
+        background-color: #efefef;
+    }
   }
   
   .zoom-container:hover .zoom-image {

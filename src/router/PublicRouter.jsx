@@ -1,13 +1,15 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router";
-import { Home, ProductsSearch, ItemDetail } from '../pages'
+import { Home, ProductsByCategory, ItemDetail, ProductsSearch, CartView } from '../pages'
 
 export const PublicRouter = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home />}/>
-                <Route path="/products/:category" element={<ProductsSearch />}/>
-                <Route path="/product/:id" element={<ItemDetail />}/>
+                <Route exact path="/" element={<Home />}/>
+                <Route exact path="/products/:category" element={<ProductsByCategory />}/>
+                <Route exact path="/product/:id" element={<ItemDetail />}/>
+                <Route exact path="/products/search/:searchValue" element={<ProductsSearch />}/>
+                <Route exact path="/cart-view" element={<CartView />}/>
             </Routes>
         </Router>
     )
