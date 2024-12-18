@@ -11,7 +11,7 @@ export const ItemCardSingle = ({data}) => {
         <Link to={`/product/${data.id}`}>
         <article className="itemCardSingle">
             <Skeleton isLoaded={!loading} startColor='grey' endColor='white'>
-                <img src={data.images[1] ? data.images[1] : data.images[0]} alt="" onLoad={() => {setLoading(false)}}/>
+                <img src={data.images[1] ? data.images[1] : data.images[0]} alt={data.title} onLoad={() => {setLoading(false)}}/>
             </Skeleton>
 
             
