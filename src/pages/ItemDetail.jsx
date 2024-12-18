@@ -70,8 +70,8 @@ export const ItemDetail = () => {
                     <RadioGroup id='radioGroup'>
                           <Stack direction='row'>
                             <Radio value='1' onClick={() => {setImgSelected(0), setLoading(true)}} style={{border: '1px solid grey', backgroundColor: 'transparent', color: 'black'}}></Radio>
-                            {product.images && product.images.length > 1 ? <Radio value='2' onClick={() => {setImgSelected(1), setLoading(true)}} style={{border: '1px solid grey', backgroundColor: 'transparent'}}></Radio> : null}
-                            {product.images && product.images.length > 2 ? <Radio value='3' onClick={() => {setImgSelected(2), setLoading(true)}} style={{border: '1px solid grey', backgroundColor: 'transparent'}}></Radio> : null}
+                            {product.images && product.images.length > 1 ? <Radio value='2' onClick={() => {setImgSelected(1), setLoading(true)}} style={{border: '1px solid grey', backgroundColor: 'transparent', color: 'black'}}></Radio> : null}
+                            {product.images && product.images.length > 2 ? <Radio value='3' onClick={() => {setImgSelected(2), setLoading(true)}} style={{border: '1px solid grey', backgroundColor: 'transparent', color: 'black'}}></Radio> : null}
                           </Stack>
                     </RadioGroup>
             </div>
