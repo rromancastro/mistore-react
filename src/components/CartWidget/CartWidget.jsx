@@ -13,7 +13,7 @@ export const CartWidget = () => {
     return (
         <Link to={'/cart-view'} id="cartWidgetContainer"> 
             <IoBagHandleOutline className="navUtilitieItem" />
-            <p>{totalItems}</p>
+            <p style={{color: '#F5F5F5'}}>{totalItems}</p>
         </Link>
     )
 }
