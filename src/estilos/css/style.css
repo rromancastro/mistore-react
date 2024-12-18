@@ -46,7 +46,7 @@
   align-items: center;
   background-color: #F5F5F5;
 }
-#homeSecondSection h1 {
+#homeSecondSection #homeSecondSectionTitle {
   margin-top: 50px;
   color: #1d1d1d;
   font-size: 50px;
@@ -124,6 +124,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   height: 100%;
   position: relative;
@@ -252,6 +253,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
+  gap: 5px;
 }
 #subtotal h3 {
   font-weight: 500;
@@ -461,6 +463,41 @@ footer {
   gap: 15px;
 }
 
+@media (max-width: 768px) {
+  #homeHeaderInfo h1 {
+    font-size: 100px;
+  }
+  #homeHeaderInfo h2 {
+    font-size: 30px;
+  }
+  #homeSecondSection #homeSecondSectionTitle {
+    font-size: 40px;
+  }
+  #homeSecondSectionSelect {
+    gap: 30px;
+  }
+  #homeSecondSectionSelect h3 {
+    font-size: 15px;
+  }
+  #itemListContainer {
+    padding: 0 8vw;
+    padding-bottom: 8vw;
+    padding-top: 4vw;
+  }
+  .card {
+    height: 100%;
+  }
+  .card img {
+    height: 220px;
+  }
+  .itemCardSingle {
+    height: 300px;
+    margin: 20px 0;
+  }
+  .itemCardSingle img {
+    height: 300px;
+  }
+}
 * {
   padding: 0;
   margin: 0;

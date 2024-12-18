@@ -21,7 +21,7 @@ export const Home = () => {
                 </div>
             </section>
             <section id='homeSecondSection'>
-                <h1>Featured Products</h1>
+                <h2 id='homeSecondSectionTitle'>Featured Products</h2>
                 <div id='homeSecondSectionSelect'>
                     <h3 className={categorySelect == 'mens-shoes' ? 'sit' : ''} onClick={() => {setCategorySelect('mens-shoes')}}>Mens Shoes</h3>
                     <h3 className={categorySelect == 'womens-shoes' ? 'sit' : ''} onClick={() => {setCategorySelect('womens-shoes')}}>Womens Shoes</h3>
