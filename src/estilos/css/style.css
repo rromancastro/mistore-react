@@ -188,7 +188,6 @@
   min-height: 90vh;
   width: 100%;
   background-color: #F5F5F5;
-  display: flex;
   padding: 30px;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -328,6 +327,7 @@ nav {
 }
 #navUtilities #searchContainer {
   display: flex;
+  align-items: center;
   gap: 2px;
 }
 #navUtilities #searchContainer input {
@@ -464,6 +464,16 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #navCategories button {
+    font-size: 13px;
+  }
+  #navUtilities .navUtilitieItem {
+    width: 15px;
+    height: 15px;
+  }
+  #navUtilities #searchContainer input {
+    height: 18px;
+  }
   #homeHeaderInfo h1 {
     font-size: 100px;
   }
@@ -496,6 +506,151 @@ footer {
   }
   .itemCardSingle img {
     height: 300px;
+  }
+  #itemDetailText h1 {
+    font-size: 30px;
+  }
+  #itemDetailText h2 {
+    font-size: 13px;
+  }
+  #itemDetailText h3 {
+    font-size: 14px;
+  }
+  #itemDetailText h4 {
+    font-size: 13px;
+  }
+  #itemDetailText ul li {
+    font-size: 13px;
+  }
+  #itemDetailText h5 {
+    font-size: 25px;
+  }
+  #cartView {
+    grid-template-columns: 70% 30%;
+  }
+  #productCartViewInfo h2 {
+    font-size: 15px;
+  }
+  #productCartViewInfo h3 {
+    font-size: 12px;
+  }
+  #productCartViewInfo #quantitySelect button {
+    padding: 0 5px;
+  }
+  #subtotal h3 {
+    font-size: 14px;
+  }
+  #purchaseInfo h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 430px) {
+  #navUtilities {
+    gap: 5px;
+  }
+  #navUtilities .navUtilitieItem {
+    width: 25px;
+    height: 25px;
+  }
+  #navUtilities #searchContainer input {
+    width: 50px;
+    height: 18px;
+  }
+  #homeHeader {
+    height: 50vh;
+  }
+  #homeHeaderInfo h1 {
+    -webkit-text-stroke: 3px white;
+    font-size: 60px;
+  }
+  #homeHeaderInfo h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+  #homeSecondSection #homeSecondSectionTitle {
+    font-size: 30px;
+  }
+  #homeSecondSectionSelect {
+    gap: 20px;
+  }
+  #homeSecondSectionSelect h3 {
+    font-size: 10px;
+  }
+  #itemAllListContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    height: 300px;
+  }
+  .card img {
+    height: 190px;
+  }
+  .itemCardSingle {
+    height: 270px;
+    margin: 20px 0;
+  }
+  .itemCardSingle div {
+    gap: 10px;
+  }
+  .itemCardSingle img {
+    height: 270px;
+  }
+  .itemCardSingle h2 {
+    font-size: 20px;
+  }
+  .itemCardSingle h3 {
+    font-size: 15px;
+  }
+  .itemCardSingle h4 {
+    font-size: 15px;
+  }
+  #itemDetail {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  #images {
+    width: 100%;
+  }
+  #itemDetailText h1 {
+    font-size: 30px;
+  }
+  #itemDetailText h2 {
+    font-size: 16px;
+  }
+  #itemDetailText h3 {
+    font-size: 18px;
+  }
+  #itemDetailText h4 {
+    font-size: 16px;
+  }
+  #itemDetailText ul li {
+    font-size: 16px;
+  }
+  #itemDetailText h5 {
+    font-size: 30px;
+  }
+  #cartView {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+  #productCartViewInfo h2 {
+    font-size: 15px;
+  }
+  #productCartViewInfo h3 {
+    font-size: 12px;
+  }
+  #productCartViewInfo #quantitySelect button {
+    padding: 0 5px;
+  }
+  #subtotal h3 {
+    font-size: 14px;
+  }
+  #purchaseInfo h2 {
+    font-size: 25px;
   }
 }
 * {

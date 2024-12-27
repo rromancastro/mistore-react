@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router"
 import {CartWidget} from '../CartWidget/CartWidget'
-import { IoIosSearch, IoMdList } from "react-icons/io";
+import { IoIosSearch, IoMdList } from "react-icons/io"
 
 import {
     Drawer,
@@ -19,6 +19,7 @@ import {
     AccordionIcon,
   } from '@chakra-ui/react'
 import React, { useState } from "react";
+import { productsCategories } from "../../helpers"
 
 
 export const NavBar = () => {
@@ -62,6 +63,11 @@ export const NavBar = () => {
                         </AccordionButton>
                         </h2>
                         <AccordionPanel pb={4} display={'flex'} flexDirection={'column'}>
+                            {
+                                productsCategories.map((item) => {
+                                    return <Link key={item.slug} to={`/products/${item.slug}`}>{item.name}</Link>
+                                })
+                            }
                             <Link to={'/products/furniture'}>Furniture</Link>
                             <Link to={'/products/groceries'}>Groceries</Link>
                             <Link to={'/products/home-decoratio'}>Home Decoration</Link>
